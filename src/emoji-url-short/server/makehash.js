@@ -4,7 +4,6 @@ function hash(url){
     return new Promise((resolve, reject) => {
         const hashmoji = spawn('python3', ['/usr/local/bin/hashmoji.py']);
         var hash ='';
-        console.log('IM HERE'); 
         hashmoji.stdout.on('data', (data)=>{
             return resolve(data.toString().replace(/(\s)/gm,""));
         });
